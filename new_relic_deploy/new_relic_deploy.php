@@ -48,6 +48,9 @@ elseif ($_POST['wf_type'] == 'deploy') {
   $user = $_POST['user_email'];
 }
 
+$revision = rtrim($revision, "\n");
+$changelog = rtrim($revision, "\n");
+
 $deployment_data = [
   "deployment" => [
     "revision" => $revision,
